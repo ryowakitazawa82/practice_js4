@@ -175,3 +175,137 @@
 
 //     showTime();
 // }
+
+// {
+    // const name = 'taguchi';
+//     const name = 5;
+
+//     try {
+//         console.log(name.toUpperCase());
+//     } catch (e) {
+//         console.log(e);
+//     }
+
+//     console.log('Finish');
+// }
+
+// {
+//      const posts = [
+//          {
+//              text: 'Javascript勉強中',
+//              likeCount: 0,
+//          },
+//          {
+//              text: 'うおお',
+//              likeCount: 0,
+//          },
+//      ];
+
+//      function show(post) {
+//          console.log(`${post.text} - ${post.likeCount}いいね`);
+//      }
+
+//      show(posts[0]);
+// }
+
+
+// {
+//      const posts = [
+//          {
+//              text: 'Javascript勉強中',
+//              likeCount: 0,
+//             //  show: function() {
+//             //     console.log(`${this.text} - ${this.likeCount}いいね`);
+//             show() {
+//                 console.log(`${this.text} - ${this.likeCount}いいね`);
+//             }
+//          },
+//          {
+//              text: 'うおお',
+//              likeCount: 0,
+//          },
+//      ];
+
+
+
+    //  show(posts[0]);
+//      posts[0].show();
+// }
+
+
+// {
+//     class Post {
+//         constructor(text) {
+//             this.text = text;
+//             this.likeCount = 0;
+//         }
+
+//         show() {
+//             console.log(`${this.text} - ${this.likeCount}likes`);
+//         }
+
+//         like() {
+//             this.likeCount++;
+//             this.show();
+//         }
+
+//         // //　静的メソッド
+//         // static showInfo() {
+//         //     console.log('Post class version 1.0')
+//         // }
+//     }
+
+//      const posts = [
+//          new Post('Javascript勉強中'),
+//          new Post('うおお'),
+//      ];
+
+//     //  posts[0].like();
+
+//     // Post.showInfo();
+
+//     //  posts[0].show();
+//     //  posts[1].show();
+// }
+
+
+{
+    class Post {
+        constructor(text) {
+            this.text = text;
+            this.likeCount = 0;
+        }
+
+        show() {
+            console.log(`${this.text} - ${this.likeCount}likes`);
+        }
+
+        like() {
+            this.likeCount++;
+            this.show();
+        }
+
+    }
+
+    class SponsoredPost extends Post {
+        constructor(text, sponsor) {
+            super(text);
+            this.sponsor = sponsor;
+        }
+
+        show() {
+            super.show();
+            console.log(`... sponsored by ${this.sponsored}`);
+        }
+
+    }
+
+     const posts = [
+         new Post('Javascript勉強中'),
+         new Post('うおお'),
+         new SponsoredPost('3分でマスター', ' あああ'),
+     ];
+
+     posts[2].show();
+     posts[2].like();
+}

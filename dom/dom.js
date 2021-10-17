@@ -33,11 +33,39 @@
 //     });
 // }
 
+// {
+//     document.querySelector('button').addEventListener('click', () => {
+//         const targetNode = document.getElementById('target');
+
+//     //    targetNode.className = 'my-color my-border';
+//     //    targetNode.classList.add('my-color');
+//     // if (targetNode.classList.contains('my-color') === true) {
+//     //     targetNode.classList.remove('my-color');
+//     // } else {
+//     //     targetNode.classList.add('my-color');
+//     // }
+//     targetNode.classList.toggle('my-color');
+//     });
+// }
+
+// {
+//     document.querySelector('button').addEventListener('click', () => {
+//         const targetNode = document.getElementById('target');
+
+//     // targetNode.textContent = 'Dotinstall';
+//     targetNode.textContent = targetNode.dataset.transition;
+//     });
+// }
+
 {
     document.querySelector('button').addEventListener('click', () => {
-        const targetNode = document.getElementById('target');
+        const item2 = document.createElement('li');
+        item2.textContent = 'item 2';
 
-       targetNode.className = 'my-color my-border';
-    });
+        // const ulNode = document.querySelector('ul');
+        const ul = document.querySelector('ul');
+        ul.appendChild(item2);
+        });
+
 }
 
